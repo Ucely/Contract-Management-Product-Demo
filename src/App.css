@@ -1,0 +1,879 @@
+.ArchitecturalDrawing{
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  min-width: 1280px;
+  margin: 0 auto;
+}
+.ArchitecturalDrawing>.title{
+  font-size: 24px;
+  color: #333;
+  margin-top: 3%;
+}
+.ArchitecturalDrawing .desc{
+  font-size: 12px;
+  color: #aaa;
+  text-transform: Uppercase;
+  margin-bottom: 2%;
+  margin-top: 5px;
+  display: block;
+  letter-spacing: 2px;
+}
+.ArchitecturalDrawing .fl{
+  width: 77%;
+  display: inline-block;
+  margin-right: 3%;
+}
+.ArchitecturalDrawing .fl ul,
+.ArchitecturalDrawing .fr ul{
+  position: relative;
+  overflow: hidden;
+  padding: 0 3%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ArchitecturalDrawing .fr ul{
+  width: 94%;
+}
+
+.ArchitecturalDrawing .fl ul.role{
+  width: 28%;
+  border-right: 1.5px dashed #ddd;
+}
+.ArchitecturalDrawing .fl ul.department{
+  width: 72%;
+}
+.ArchitecturalDrawing .fl ul.department li{
+  width: 32%;
+  display: inline-block;
+  margin-right: 2%;
+}
+.ArchitecturalDrawing .fl ul.department li:nth-child(3n+0){
+  margin-right: 0%;
+}
+
+.ArchitecturalDrawing .fl ul h3{
+  font-size: 14px;
+  color: #205D4F;
+  font-weight: normal;
+}
+.ArchitecturalDrawing .fl ul p{
+  line-height: 50px;
+  padding: 8px 0;
+  background-image: linear-gradient(to right, #F2F5FB , #EBF0FB);
+  color: #236455;
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  border-left: 1px solid #92aaeb;
+  border-right: 1px solid #92aaeb;
+  border-top: 1px solid #92aaeb;      
+}
+.ArchitecturalDrawing .fl ul p img{
+  width: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ArchitecturalDrawing .fl ul p span{
+  vertical-align: middle;
+  font-size: 14px;
+  margin-left: 6px;
+  color: #333;
+}
+.ArchitecturalDrawing .fl ul p span:hover{
+  color: #2B57D8;
+}
+.ArchitecturalDrawing .fl>h3,
+.ArchitecturalDrawing .fr>h3,
+.ArchitecturalDrawing .mid>h3{
+  font-size: 18px;
+}
+.ArchitecturalDrawing .fl>h3 img,
+.ArchitecturalDrawing .fr>h3 img,
+.ArchitecturalDrawing .mid>h3 img{
+  width: 45px;
+  margin-right: 10px;
+  vertical-align: middle;
+  margin-left: -10px;
+}
+.ArchitecturalDrawing .fl>h3 span,
+.ArchitecturalDrawing .fr>h3 span,
+.ArchitecturalDrawing .mid>h3 span{
+  vertical-align: middle;
+}
+.ArchitecturalDrawing .fr{
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+.fullcontainter .icon_leftTopRadius{
+  border-style: solid;
+  border-width: 0px 0px 20px 20px;
+  border-color: transparent transparent #FBFCFD transparent;
+  width: 0px;
+  height: 0px;
+  top: -2px;
+  left: -2px;
+  position: absolute;
+  z-index: 5;
+  transform: rotate(180deg);
+}
+.fullcontainter .icon_rightTopRadius{
+  border-style: solid;
+  border-width: 0px 0px 20px 20px;
+  border-color: transparent transparent #FBFCFD transparent;
+  width: 0px;
+  height: 0px;
+  top: -2px;
+  right: -2px;
+  position: absolute;
+  z-index: 5;
+  transform: rotateX(180deg);
+}
+.fullcontainter .icon_leftBottomRadius{
+  border-style: solid;
+  border-width: 0px 0px 20px 20px;
+  border-color: transparent transparent #FBFCFD transparent;
+  width: 0px;
+  height: 0px;
+  left: -2px;
+  bottom: -2px;
+  position: absolute;
+  z-index: 5;
+  transform: rotateY(180deg);
+}
+.fullcontainter .icon_rightBottomRadius{
+  border-style: solid;
+  border-width: 0px 0px 20px 20px;
+  border-color: transparent transparent #FBFCFD transparent;
+  width: 0px;
+  height: 0px;
+  right: -2px;
+  bottom: -2px;
+  position: absolute;
+  z-index: 5;
+}
+.fullcontainter .div_frontEnd,.fullcontainter .div_ourApplication,.fullcontainter .div_backEnd{
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 20px;
+}
+.div_bottom_block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.div_bottom_block>span.line {
+  background: #B0D1C9;
+}
+.div_bottom_block span.line_inner {
+  background: #B0D1C9;
+}
+.div_bottom_block:hover>span.line {
+  background: #67BFAA;
+}
+.div_bottom_block:hover span.line_inner {
+  background: #67BFAA;
+}
+.fullcontainter .div_frontEnd li{
+  background: linear-gradient(#EEF5F6, #F9FCFD);
+  border: 1px solid  #B6D8D0;
+  margin: 3px 0;
+  line-height: 30px;
+  color: #4B615B;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.fullcontainter .div_frontEnd li:hover{
+  background: linear-gradient(#E5F0EE, #FAFCFC);
+  border: 1px solid  #148065;
+  color: #148065;
+  cursor: pointer;
+}
+.fullcontainter .div_frontEnd h3,
+.fullcontainter .div_frontEnd .arrow,
+.fullcontainter .div_ourApplication h3,
+.fullcontainter .div_ourApplication .arrow,
+.fullcontainter .div_backEnd h3,
+.fullcontainter .div_backEnd .arrow{
+  position: absolute;
+}
+
+.fullcontainter .ArchitecturalDrawing .fl h3{
+  top: 20px;
+  left: 50px;
+  font-size: 16px;
+  color: #148066;
+}
+.fullcontainter .div_component h3{
+  padding: 15px 0 6px;
+}
+.fullcontainter .div_backEnd h3,
+.fullcontainter .div_component h3{
+  top: 10px !important;
+  color: #3B496E !important;
+}
+.fullcontainter .div_ourApplication h3{
+  top: 115px !important;
+  color: #2B57D8 !important;
+}
+.fullcontainter .div_frontEnd h3 .img,
+.fullcontainter .div_ourApplication h3 .img,
+.fullcontainter .div_backEnd h3 .img{
+  width: 70px;
+  display: block;
+  height: 70px;
+  margin: 0 auto;
+}
+.fullcontainter .div_component h3 .img{
+  width: 70px;
+  display: inline-block;
+  height: 70px;
+  vertical-align: middle;
+}
+.fullcontainter .div_component h3  span{
+  vertical-align: middle;
+}
+.fullcontainter .div_frontEnd h3 .img{
+  background: url('${appRes}/ArchitecturalDrawing01.png');
+  background-size: 100% 100%;
+}
+.fullcontainter .div_ourApplication h3 .img{
+  background: url('${appRes}/ArchitecturalDrawing02.png');
+  background-size: 100% 100%;
+}
+.fullcontainter .div_backEnd h3 .img{
+  background: url('${appRes}/ArchitecturalDrawing03.png');
+  background-size: 100% 100%;
+}
+.fullcontainter .div_component h3 .img{
+  background: url('${appRes}/ArchitecturalDrawing04.png');
+  background-size: 100% 100%;
+}
+
+.icon_leftTopLine,.icon_rightTopLine,
+.icon_leftBottomLine,.icon_rightBottomLine{
+  width: 1px;
+  height: 25px;  
+  position: absolute;
+  display: block;
+  z-index: 20;
+}
+.icon_leftTopLine,.icon_rightBottomLine,
+.icon_leftTopLine_inner,.icon_rightBottomLine_inner{
+  transform: rotate(45deg);
+}
+.icon_leftBottomLine,.icon_rightTopLine,
+.icon_leftBottomLine_inner,.icon_rightTopLine_inner{
+  transform: rotate(135deg);
+}
+.icon_leftTopLine{
+  left: 8px;
+  top: -4px;
+}
+.icon_rightTopLine{
+  right: 8px;
+  top: -4px;
+}
+.icon_leftBottomLine{
+  left: 8px;
+  bottom: -4px;
+}
+.icon_rightBottomLine{
+  right: 8px;
+  bottom: -4px;
+}
+.icon_leftTopLine_inner{
+  left: 12px;
+  top: 4px;
+}
+.icon_rightTopLine_inner{
+  right: 12px;
+  top: 4px;
+}
+.icon_leftBottomLine_inner{
+  left: 12px;
+  bottom: 4px;
+}
+.icon_rightBottomLine_inner{
+  right: 12px;
+  bottom: 4px;
+}
+
+.div_frontEnd span.line{
+  background: #46b298;
+}
+.div_frontEnd span.line_inner{
+  background: #6CAF9F;
+}
+
+
+
+.div_backEnd span.line_inner,
+.div_component span.line_inner{
+  background: #9BA3B6;
+}
+  
+.icon_leftTopLine_inner,.icon_rightTopLine_inner,
+.icon_leftBottomLine_inner,.icon_rightBottomLine_inner{
+  width: 2px;
+  height: 16px;  
+  position: absolute;
+  display: block;
+  z-index: 20;
+}
+
+
+
+/* 后端引擎中心 */
+.fullcontainter .div_backEnd li,
+.ArchitecturalDrawing .fr ul li{
+  background: linear-gradient(#F3F3F7, #FDFDFE);
+  border: 1px solid  #C4C8D3;
+  margin: 3px 0;
+  line-height: 42px;
+  color: #4C5368;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.fullcontainter .div_backEnd li:hover,
+.ArchitecturalDrawing .fr ul li:hover{
+  background: linear-gradient(#E8EAEF, #FBFCFD);  
+  color: #3B496E;
+  border: 1px solid  #3B496E;
+}
+.ArchitecturalDrawing .fr ul li.highlight:hover{
+  color: #2B57D8;
+  border: 1px solid  #2B57D8;
+}
+.ArchitecturalDrawing .fr ul li{
+  width: 46%;
+  margin: 6px 2%;
+  line-height: 60px;
+  cursor: pointer;
+}
+.ArchitecturalDrawing .fl ul.engine{
+  width: 60%;
+  border-right: 1.5px dashed #ddd;
+}
+.ArchitecturalDrawing .fl ul.other{
+  width: 20%;
+  border-right: 1.5px dashed #ddd;
+}
+.ArchitecturalDrawing .fl ul.service{
+  width: 20%;
+}
+.ArchitecturalDrawing .fl ul.engine li{
+  width: 32%;
+  margin-right: 2%;
+  position: relative;
+  cursor: pointer;
+}
+.ArchitecturalDrawing .fl ul.engine li:nth-child(n+4){
+  width: 23.5%;
+  margin-right: 2%;
+}
+.ArchitecturalDrawing .fl ul.engine li:nth-child(3),
+.ArchitecturalDrawing .fl ul.engine li:last-child{
+  margin-right: 0%;
+}
+
+/* 中台应用中心 */
+.fullcontainter .div_ourApplication .businessUl,
+.fullcontainter .div_ourApplication .share{
+  overflow: hidden;
+}
+.ArchitecturalDrawing .fl ul.businessUl,
+.ArchitecturalDrawing .fl ul.share{
+  width: 100%;
+}
+.ArchitecturalDrawing .fl ul.businessUl svg{
+  width: 2%;
+  vertical-align: middle;
+}
+.ArchitecturalDrawing .fl ul.businessUl .business{
+  width: 15%;
+  display: inline-block;
+  padding: 0 0 10px;
+}
+.ArchitecturalDrawing .fl ul.businessUl .business>div{
+  border: 1px solid #93AAEB;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(#f0f3fb, #ffffff);
+}
+.ArchitecturalDrawing .fl ul.businessUl .business:hover div{
+  border: 1px solid #2B57D8;
+}
+.ArchitecturalDrawing .fl ul.businessUl .business:hover p{
+  border-top: 1px solid #2B57D8;
+  border-right: 1px solid #2B57D8;
+  border-left: 1px solid #2B57D8;
+
+}
+.ArchitecturalDrawing .fl ul.businessUl .business li{
+  color: #8A93AE;
+  line-height: 28px;
+  cursor: pointer;
+}
+.ArchitecturalDrawing .fl ul.businessUl .business li:hover{
+  color: #333;
+}
+.ArchitecturalDrawing .fl ul.share .shareData{
+  width: 32%;
+  margin-right: 2%;
+  line-height: 38px;
+  color:#2B57D8;
+  border: 1px solid #93AAEB;
+  display: inline-block;
+  position: relative;
+}
+.ArchitecturalDrawing .fl ul.share .shareData:hover{
+  border: 1px solid #2B57D8;
+  background: linear-gradient(#F3F4FC, #FDFDFF);
+  cursor: pointer;
+}
+.ArchitecturalDrawing .fl ul.share .shareData:last-child{
+  margin-right: 0;
+}
+.fullcontainter .div_ourApplication .arrowUp{
+  padding: 5px 3% 0;
+}
+.fullcontainter .application .arrowUp div{
+  text-align: center;
+  width: 16.666%;
+  display: inline-block;
+}
+.fullcontainter .div_ourApplication .arrowUp img{
+  width: 7px;
+  display: inline-block;
+  
+}
+
+
+/* 十字样式 */
+
+.icon_leftTop_cross::before{
+    content: '';
+    left: 0px;
+    top: 0px;
+}
+.icon_rightTop_cross::before{
+    content: '';
+    right: 0px;
+    top: 0px;
+}
+.icon_leftBottom_cross::before{
+    content: '';
+    left: 0px;
+    bottom: 0px;
+}
+.icon_rightBottom_cross::before{
+    content: '';
+    right: 0px;
+    bottom: 0px;
+}
+.icon_leftTop_cross::before,.icon_rightTop_cross::before,
+.icon_leftBottom_cross::before,.icon_rightBottom_cross::before{
+    width: 6px;
+    height: 1px;
+    position: absolute;
+    z-index: 10;
+}
+.icon_leftTop_cross::after{
+    content: '';
+    left: 0px;
+    top: 0px;
+}
+.icon_rightTop_cross::after{
+    content: '';
+    right: 0px;
+    top: 0px;
+}
+.icon_leftBottom_cross::after{
+    content: '';
+    left: 0px;
+    bottom: 0px;
+}
+.icon_rightBottom_cross::after{
+    content: '';
+    right: 0px;
+    bottom: 0px;
+}
+.icon_leftTop_cross::after,.icon_rightTop_cross::after,
+.icon_leftBottom_cross::after,.icon_rightBottom_cross::after{
+    height: 6px;
+    width: 1px;
+    position: absolute;
+    z-index: 10;
+}
+.ArchitecturalDrawing .fr  ul li.highlight{
+  background: linear-gradient(#F3F4FC, #FDFDFF);
+  color: #2B57D8;
+}
+.ArchitecturalDrawing .fr  ul li.highlight:hover{
+  background: linear-gradient(#E9ECF8, #FBFCFD);
+}
+.fullcontainter .div_ourApplication .icon_leftTop_cross.icon_cross2::before,
+.fullcontainter .div_component .icon_leftTop_cross.icon_cross2::before{
+  left: 17px !important;
+}
+.fullcontainter .div_ourApplication .icon_leftTop_cross.icon_cross2::after,
+.fullcontainter .div_component .icon_leftTop_cross.icon_cross2::after{
+  top: 17px !important;
+}
+/* 箭头样式 */
+.fullcontainter .div_frontEnd i.arrow{
+  width: 63px;
+  height: 8px;
+  background: url('${appRes}/icon_arrow.png');
+  background-size: 100% 100%;
+  left: 170px;
+  top: 62px;
+}
+.fullcontainter .div_ourApplication i.arrow{
+  width: 63px;
+  height: 8px;
+  background: url('${appRes}/icon_arrow_blue.png');
+  background-size: 100% 100%;
+  left: 170px;
+  top: 160px;
+}
+.fullcontainter .div_backEnd  i.arrow{
+  width: 63px;
+  height: 8px;
+  background: url('${appRes}/icon_arrow_black.png');
+  background-size: 100% 100%;
+  left: 170px;
+  top: 60px;
+}
+
+/* 数字化组件样式 */
+.fullcontainter .div_component{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
+
+
+
+.fullcontainter .div_frontEnd>div{
+  border: 1px solid #45B298;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  background: #ffffff61;
+}
+.fullcontainter .div_ourApplication>div{
+  border: 1px solid #2B57D8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  background: #ffffff61;
+}
+.fullcontainter .div_backEnd>div{
+  border: 1px solid #3B496E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  background: #ffffff61;
+}
+.fullcontainter .div_backEnd>div,
+.fullcontainter .div_component>div{
+  border: 1px solid #3B496E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  background: #ffffff61;
+}
+.dashed {
+  width: 15px;
+  height: 15px;
+  background: #1365E3;
+  border: 4px solid #FFFFFF;
+  border-radius: 50%;
+}
+.div_backEnd span.line,
+.div_component span.line{
+  background: #c4c8d3;
+}
+.div_backEnd span.line,.div_component>span.line,
+.div_component li:hover>span.line{
+  background-color: #3b496e;
+}
+.div_ourApplication span.line{
+  background: #93AAEB;
+}
+.div_ourApplication span.line_inner{
+  background: #93AAEB;
+}
+.div_ourApplication>span.line{
+  background: #2B57D8;
+}
+
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
+  transform: rotate(-90deg);
+}
+
+.arrow-first {
+  -webkit-animation: arrow-movement 2s ease-in-out infinite;
+          animation: arrow-movement 2s ease-in-out infinite;
+}
+
+.arrow-second {
+  -webkit-animation: arrow-movement 2s 1s ease-in-out infinite;
+          animation: arrow-movement 2s 1s ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  background: rgb(56, 178, 172);
+  content: "";
+  display: block;
+  height: 1.5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+}
+
+.arrow:before {
+  transform: rotate(45deg) translateX(-23%);
+  transform-origin: top left;
+}
+
+.arrow:after {
+  transform: rotate(-45deg) translateX(23%);
+  transform-origin: top right;
+}
+
+@-webkit-keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    left: 30%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    left: 30%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrow-up {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-up-first {
+  -webkit-animation: arrow-up-movement 2s ease-in-out infinite;
+          animation: arrow-up-movement 2s ease-in-out infinite;
+}
+
+.arrow-up-second {
+  -webkit-animation: arrow-up-movement 2s 1s ease-in-out infinite;
+          animation: arrow-up-movement 2s 1s ease-in-out infinite;
+}
+
+.arrow-up:before,
+.arrow-up:after {
+  background: #38b2ac;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+}
+
+.arrow-up:before {
+  transform: rotate(45deg) translateX(-23%);
+  transform-origin: top left;
+}
+
+.arrow-up:after {
+  transform: rotate(-45deg) translateX(23%);
+  transform-origin: top right;
+}
+
+@-webkit-keyframes arrow-up-movement {
+  0% {
+    opacity: 0;
+    top: 10%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-up-movement {
+  0% {
+    opacity: 0;
+    top: 10%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.arrow-down {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-down-first {
+  -webkit-animation: arrow-down-movement 2s ease-in-out infinite;
+          animation: arrow-down-movement 2s ease-in-out infinite;
+}
+
+.arrow-down-second {
+  -webkit-animation: arrow-down-movement 2s 1s ease-in-out infinite;
+          animation: arrow-down-movement 2s 1s ease-in-out infinite;
+}
+
+.arrow-down:before,
+.arrow-down:after {
+  background: #38b2ac;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+}
+
+.arrow-down:before {
+  transform: rotate(-45deg) translateX(-27%);
+  transform-origin: top left;
+}
+
+.arrow-down:after {
+  transform: rotate(45deg) translateX(27%);
+  transform-origin: top right;
+}
+
+@-webkit-keyframes arrow-down-movement {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 10%;
+  }
+}
+
+@keyframes arrow-down-movement {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 10%;
+  }
+}
+
+.arrow1{
+  -webkit-animation: arrow-fade-in 10s 0s infinite;
+          animation: arrow-fade-in 10s 0s infinite;
+}
+.arrow2{
+  -webkit-animation: arrow-fade-out 10s 0s infinite;
+          animation: arrow-fade-out 10s 0s infinite;
+}
+
+@keyframes arrow-fade-in {
+  0%, 40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes arrow-fade-out {
+  0% {
+    opacity: 1;
+  }
+  70%, 100% {
+    opacity: 0;
+  }
+}
+
+.h-36 {
+  height: 4rem;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
