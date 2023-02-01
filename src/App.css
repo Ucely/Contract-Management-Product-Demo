@@ -1,3 +1,42 @@
+.circle{
+  border: 1px solid #A1FFF2;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+.transition {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+}
+.z-50 {
+  z-index: 50;
+}
+.text-xs {
+  font-size: 0.75rem;
+}
+.text-center {
+  text-align: center;
+}
+.absolute {
+  position: absolute;
+}
+.p-1 {
+  padding: 0.25rem;
+}
+.font-medium {
+  font-weight: 500;
+}
+
+.line-x {
+    height: 3px;
+    background-size: auto 100%;
+    background-repeat: repeat;
+}
+
 .ArchitecturalDrawing{
   text-align: center;
   overflow: hidden;

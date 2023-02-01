@@ -1,59 +1,64 @@
-import "./App.css";
-import Zebra from "../components/Zebra/Zebra.component";
-import Node from "../components/Node/Node.component";
-import Stage from "../components/Stage/Stage.component";
-import OPTIONS from "../OPTIONS";
+import { Routes, Route } from 'react-router-dom';
 
-const BackGround = () => {
+import Zebra from '../components/Zebra/Zebra.component';
+import Chapter from '../components/Chapter/Chapter.component';
+import Item from '../components/Item/Item.component';
+
+import OPTIONS from '../OPTIONS';
+
+import './App.css';
+
+const Home = () => {
+  const { children } = OPTIONS[5];
   return (
     <div
-      className="w-full h-full relative"
-      style={{ background: "#131a53", "text-align": "center" }}
+      className="w-full relative"
+      style={{ background: '#131a53', textAlign: 'center' }}
     >
-      <div style={{ height: "2.2vh" }}>
-        {/* <img
+      <div style={{ height: '2.2vh' }}>
+        <img
           className="absolute"
           style={{ top: '3vh', width: '8vh', left: '3.2vh' }}
-          src="${appRes}/weaver.png"
-        /> */}
-        {/* <img
+          src="./img/weaver.png"
+        />
+        <img
           className="absolute"
           style={{ top: '4.3vh', width: '6.8vh', left: '13vh' }}
-          src="${appRes}/jincengda.png"
-        /> */}
+          src="./img/jincengda.png"
+        />
       </div>
-      <h1 className="text-white" style={{ "font-family": "Microsoft YaHei" }}>
+      <h1 className="text-white" style={{ fontFamily: 'Microsoft YaHei' }}>
         全程数字化合同管理业务体验站点
       </h1>
       <p
         className="text-white"
-        style={{ textTransform: "uppercase", "letter-spacing": "2px" }}
+        style={{ textTransform: 'uppercase', letterSpacing: '2px' }}
       >
         Full-process digital contract management platform trial site
       </p>
       {/** 纵向斑马线 */}
-      <div className="w-full" style={{ padding: "0 1.65vh" }}>
+      <div className="w-full" style={{ padding: '0 1.65vh' }}>
         <div
           className="absolute w-full top-0 left-0 flex text-white"
-          style={{ padding: "26.8vh 1.62vw 1.65vh" }}
+          style={{ padding: '26.8vh 1.62vw 1.65vh' }}
         >
           <div className="w-1/5 relative">
-            <div className="absolute" style={{ right: "0px", top: "0" }}>
+            <div className="absolute" style={{ right: 0, top: 0 }}>
               <Zebra size={`55vh`} rotate={-180} />
             </div>
           </div>
           <div className="w-1/5 relative">
-            <div className="absolute" style={{ right: "0px", top: "0" }}>
+            <div className="absolute" style={{ right: 0, top: 0 }}>
               <Zebra size={`55vh`} rotate={-180} />
             </div>
           </div>
           <div className="w-1/5 relative">
-            <div className="absolute" style={{ right: "0px", top: "0" }}>
+            <div className="absolute" style={{ right: 0, top: 0 }}>
               <Zebra size={`55vh`} rotate={-180} />
             </div>
           </div>
           <div className="w-1/5 relative">
-            <div className="absolute" style={{ right: "0px", top: "0" }}>
+            <div className="absolute" style={{ right: '0px', top: '0' }}>
               <Zebra size={`55vh`} rotate={-180} />
             </div>
           </div>
@@ -64,217 +69,62 @@ const BackGround = () => {
       <div
         className="sp"
         style={{
-          backgroundImage: "",
-          backgroundSize: "100% auto",
-          backgroundPositionY: "70%",
+          backgroundImage: '',
+          backgroundSize: '100% auto',
+          backgroundPositionY: '70%',
         }}
       >
         <div
           className="flex z-50"
-          style={{ height: "79.8vh", padding: "1.65vh 1.46vw" }}
+          style={{ height: '79.8vh', padding: '1.65vh 1.46vw' }}
         >
-          <Stage title="起草审批">
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <div
-              className="absolute line-x"
-              style={{
-                width: "38%",
-                left: "64%",
-                top: "62.9vh",
-                backgroundImage: "url(${appRes}/trajectory.gif)",
-              }}
-            ></div>
-            <div class="w-1/5 flex absolute" style={{ bottom: "-5.96vh" }}>
-              <div class="relative left-1/2 h-36">
-                <div class="arrow-up arrow-up-first"></div>
-                <div class="arrow-up arrow-up-second"></div>
-              </div>
-            </div>
-          </Stage>
-          <Stage title="电子签署">
-            <div
-              className="absolute line-x"
-              style={{
-                width: "40%",
-                left: "-5px",
-                top: "8.26vh",
-                backgroundImage: "url(${appRes}/trajectory.gif)",
-              }}
-            ></div>
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <div
-              className="absolute line-x"
-              style={{
-                width: "38%",
-                left: "64%",
-                top: "62.9vh",
-                backgroundImage: "url(${appRes}/trajectory.gif)",
-              }}
-            ></div>
-            <div class="w-1/5 flex absolute" style={{ bottom: "-5.96vh" }}>
-              <div class="relative left-1/2 h-36">
-                <div class="arrow-up arrow-up-first"></div>
-                <div class="arrow-up arrow-up-second"></div>
-              </div>
-            </div>
-          </Stage>
-          <Stage title="电子台账">
-            <div
-              className="absolute line-x"
-              style={{
-                width: "40%",
-                left: "-5px",
-                top: "8.26vh",
-                backgroundImage: "url(${appRes}/trajectory.gif)",
-              }}
-            ></div>
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <div
-              className="absolute line-x"
-              style={{
-                width: "38%",
-                left: "64%",
-                top: "62.9vh",
-                backgroundImage: "url(${appRes}/trajectory.gif)",
-              }}
-            ></div>
-            <div class="w-1/5 flex absolute" style={{ bottom: "-5.96vh" }}>
-              <div class="relative left-1/2 h-36">
-                <div class="arrow-up arrow-up-first"></div>
-                <div class="arrow-up arrow-up-second"></div>
-              </div>
-            </div>
-          </Stage>
-          <Stage title="合同履约">
-            <div
-              className="absolute line-x"
-              style={{
-                width: "40%",
-                left: "-5px",
-                top: "8.26vh",
-                backgroundImage: "url(${appRes}/trajectory.gif)",
-              }}
-            ></div>
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <div
-              className="absolute line-x"
-              style={{
-                width: "38%",
-                left: "64%",
-                top: "62.9vh",
-                backgroundImage: "url(${appRes}/trajectory.gif)",
-              }}
-            ></div>
-            {/**
-             * <div className="absolute line-x" style={{width:'135%',left: '70%',top: '58vh', backgroundImage: "url(${appRes}/trajectory.gif)"}}></div>
-             */}
-            <div class="w-1/5 flex absolute" style={{ bottom: "-5.96vh" }}>
-              <div class="relative left-1/2 h-36">
-                <div class="arrow-up arrow-up-first"></div>
-                <div class="arrow-up arrow-up-second"></div>
-              </div>
-            </div>
-          </Stage>
-          <Stage title="合同归档">
-            {/**<Stage title="全数字化归档" hideArrow>*/}
-            <div
-              className="absolute line-x"
-              style={{
-                width: "40%",
-                left: "0",
-                top: "8.26vh",
-                backgroundImage: "url(${appRes}/trajectory.gif)",
-              }}
-            ></div>
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <Zebra />
-            <Node {...OPTIONS} />
-            <div class="w-1/5 flex absolute" style={{ bottom: "-5.96vh" }}>
-              <div class="relative left-1/2 h-36">
-                <div class="arrow-up arrow-up-first"></div>
-                <div class="arrow-up arrow-up-second"></div>
-              </div>
-            </div>
-            {/** 
-                 * <div class="w-1/5 flex absolute" style={{ bottom: '-5.96vh' }}>
-                    <div class="relative left-1/2 h-36">
-                      <div class="arrow-up arrow-up-first"></div>
-                      <div class="arrow-up arrow-up-second"></div>
-                    </div>
-                  </div>
-                 * */}
-          </Stage>
+          {[...Array(5).keys()].map((index) => (
+            <Chapter {...OPTIONS[index]} key={index} />
+          ))}
         </div>
         <div
           className="w-full px-24	flex justify-between items-center relative"
           style={{
-            height: "5vh",
-            "padding-left": "9rem",
-            "padding-right": "9rem",
+            height: '5vh',
+            paddingLeft: '9rem',
+            paddingRight: '9rem',
           }}
         >
-          <Node {...OPTIONS} />
-          <Zebra rotate={-90} size={"25vh"} />
-          <Node {...OPTIONS} />
-          <Zebra rotate={-90} size={"25vh"} />
-          <Node {...OPTIONS} />
-          <Zebra rotate={-90} size={"25vh"} />
-          <Node {...OPTIONS} />
-          <Zebra rotate={-90} size={"25vh"} />
-          <Node {...OPTIONS} />
+          <Item {...children[0]} />
+          <Zebra rotate={-90} size="25vh" />
+          <Item {...children[1]} />
+          <Zebra rotate={-90} size="25vh" />
+          <Item {...children[2]} />
+          <Zebra rotate={-90} size="25vh" />
+          <Item {...children[3]} />
+          <Zebra rotate={-90} size="25vh" />
+          <Item {...children[4]} />
         </div>
       </div>
-      <div style={{ height: "5vh" }}></div>
+      <div style={{ height: '5vh' }}></div>
     </div>
   );
 };
 
-function App() {
+// function App() {
+//   return (
+//     <div className="App">
+//       <Home />
+//     </div>
+//   );
+// }
+
+const Details = () => {
+  return <>你好你好</>;
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <BackGround />
-      <div></div>
-      <div></div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/details" element={<Details />} />
+    </Routes>
   );
-}
+};
 
 export default App;
