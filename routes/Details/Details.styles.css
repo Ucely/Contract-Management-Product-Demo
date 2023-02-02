@@ -1,0 +1,32 @@
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  top: 50vh;
+  /* right: 2vw; */
+  opacity: 0.6;
+  border-radius: 15px;
+}
+
+#mydiv:hover {
+  opacity: 1;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+    border-radius: 15px;
+}
+
+.detail-header {
+  opacity: 0.8;
+}
+
+.detail-header:hover {
+  opacity: 0;
+}
