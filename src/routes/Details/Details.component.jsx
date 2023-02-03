@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Steps, Breadcrumb } from 'antd';
 import { Link } from 'react-router-dom';
 
-import { HomeOutlined, UserOutlined } from '@ant-design/icons';
+import { HomeOutlined } from '@ant-design/icons';
 
 import './Details.styles.css';
 

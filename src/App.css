@@ -1,5 +1,28 @@
+.wea-stage-bg .relative:hover {
+  background: linear-gradient(179deg, rgba(0, 38, 159, 0.6), rgba(5, 109, 249, 0)) !important;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
 .circle{
   border: 1px solid #A1FFF2;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .rounded-full {
@@ -9,24 +32,31 @@
 .duration-100 {
   transition-duration: 100ms;
 }
+
 .transition {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
 }
+
 .z-50 {
   z-index: 50;
 }
+
 .text-xs {
   font-size: 0.75rem;
 }
+
 .text-center {
   text-align: center;
 }
+
 .absolute {
   position: absolute;
 }
+
 .p-1 {
   padding: 0.25rem;
 }
+
 .font-medium {
   font-weight: 500;
 }
@@ -369,139 +399,6 @@
   position: absolute;
   display: block;
   z-index: 20;
-}
-
-
-
-/* 后端引擎中心 */
-.fullcontainter .div_backEnd li,
-.ArchitecturalDrawing .fr ul li{
-  background: linear-gradient(#F3F3F7, #FDFDFE);
-  border: 1px solid  #C4C8D3;
-  margin: 3px 0;
-  line-height: 42px;
-  color: #4C5368;
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  cursor: pointer;
-}
-.fullcontainter .div_backEnd li:hover,
-.ArchitecturalDrawing .fr ul li:hover{
-  background: linear-gradient(#E8EAEF, #FBFCFD);  
-  color: #3B496E;
-  border: 1px solid  #3B496E;
-}
-.ArchitecturalDrawing .fr ul li.highlight:hover{
-  color: #2B57D8;
-  border: 1px solid  #2B57D8;
-}
-.ArchitecturalDrawing .fr ul li{
-  width: 46%;
-  margin: 6px 2%;
-  line-height: 60px;
-  cursor: pointer;
-}
-.ArchitecturalDrawing .fl ul.engine{
-  width: 60%;
-  border-right: 1.5px dashed #ddd;
-}
-.ArchitecturalDrawing .fl ul.other{
-  width: 20%;
-  border-right: 1.5px dashed #ddd;
-}
-.ArchitecturalDrawing .fl ul.service{
-  width: 20%;
-}
-.ArchitecturalDrawing .fl ul.engine li{
-  width: 32%;
-  margin-right: 2%;
-  position: relative;
-  cursor: pointer;
-}
-.ArchitecturalDrawing .fl ul.engine li:nth-child(n+4){
-  width: 23.5%;
-  margin-right: 2%;
-}
-.ArchitecturalDrawing .fl ul.engine li:nth-child(3),
-.ArchitecturalDrawing .fl ul.engine li:last-child{
-  margin-right: 0%;
-}
-
-/* 中台应用中心 */
-.fullcontainter .div_ourApplication .businessUl,
-.fullcontainter .div_ourApplication .share{
-  overflow: hidden;
-}
-.ArchitecturalDrawing .fl ul.businessUl,
-.ArchitecturalDrawing .fl ul.share{
-  width: 100%;
-}
-.ArchitecturalDrawing .fl ul.businessUl svg{
-  width: 2%;
-  vertical-align: middle;
-}
-.ArchitecturalDrawing .fl ul.businessUl .business{
-  width: 15%;
-  display: inline-block;
-  padding: 0 0 10px;
-}
-.ArchitecturalDrawing .fl ul.businessUl .business>div{
-  border: 1px solid #93AAEB;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background: linear-gradient(#f0f3fb, #ffffff);
-}
-.ArchitecturalDrawing .fl ul.businessUl .business:hover div{
-  border: 1px solid #2B57D8;
-}
-.ArchitecturalDrawing .fl ul.businessUl .business:hover p{
-  border-top: 1px solid #2B57D8;
-  border-right: 1px solid #2B57D8;
-  border-left: 1px solid #2B57D8;
-
-}
-.ArchitecturalDrawing .fl ul.businessUl .business li{
-  color: #8A93AE;
-  line-height: 28px;
-  cursor: pointer;
-}
-.ArchitecturalDrawing .fl ul.businessUl .business li:hover{
-  color: #333;
-}
-.ArchitecturalDrawing .fl ul.share .shareData{
-  width: 32%;
-  margin-right: 2%;
-  line-height: 38px;
-  color:#2B57D8;
-  border: 1px solid #93AAEB;
-  display: inline-block;
-  position: relative;
-}
-.ArchitecturalDrawing .fl ul.share .shareData:hover{
-  border: 1px solid #2B57D8;
-  background: linear-gradient(#F3F4FC, #FDFDFF);
-  cursor: pointer;
-}
-.ArchitecturalDrawing .fl ul.share .shareData:last-child{
-  margin-right: 0;
-}
-.fullcontainter .div_ourApplication .arrowUp{
-  padding: 5px 3% 0;
-}
-.fullcontainter .application .arrowUp div{
-  text-align: center;
-  width: 16.666%;
-  display: inline-block;
-}
-.fullcontainter .div_ourApplication .arrowUp img{
-  width: 7px;
-  display: inline-block;
-  
 }
 
 
@@ -916,3 +813,15 @@
   left: 50%;
 }
 
+.icon_leftTopRadius {
+  border-color: transparent transparent rgb(19 26 83) transparent !important;
+  border-style: solid;
+  border-width: 0px 0px 20px 20px;
+  width: 0px;
+  height: 0px;
+  top: -2px;
+  left: -2px;
+  position: absolute;
+  z-index: 5;
+  transform: rotate(180deg);
+}

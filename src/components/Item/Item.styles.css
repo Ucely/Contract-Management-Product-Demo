@@ -1,0 +1,32 @@
+.circle:hover {
+    background: linear-gradient(0deg, rgba(0, 255, 226, 0.6),rgba(0, 255, 226, 0.6))!important;
+    box-shadow: rgb(160 174 192) 0px 0px 10px 2px!important;
+    border: 2px solid #FFFFFF!important;
+    cursor: pointer;
+}
+
+.circle:hover div {
+    border: 1px solid rgba(255, 255, 255, 0.51)!important;
+    color: #FFFFFF!important;
+    background: #00b5af!important;
+    cursor: pointer;
+}
+
+.icon {
+  width: 2.7vh;
+}
+
+/* .icon:hover {
+  width: 3vh;
+} */
+
+.item-row {
+  background: linear-gradient(179deg, rgba(0, 38, 159, 0.2), rgba(5, 109, 249, 0));
+  margin-top: 1vh;
+  padding: 1vh 0px 3.3vh;
+}
+
+.icon-circle :hover {
+  scale: 1.2;
+}
+

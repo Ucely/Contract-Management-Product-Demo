@@ -4,12 +4,14 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Driver from 'driver.js';
 import 'driver.js/dist/driver.min.css';
 
-import Zebra from '../components/Zebra/Zebra.component';
-import Chapter from '../components/Chapter/Chapter.component';
-import Item from '../components/Item/Item.component';
-import Details from '../routes/Details/Details.component';
+import Header from './components/Header/Header.component';
+import VerticalZebra from './components/VerticalZebra/VerticalZebra';
+import Zebra from './components/Zebra/Zebra.component';
+import Chapter from './components/Chapter/Chapter.component';
+import Item from './components/Item/Item.component';
+import Details from './routes/Details/Details.component';
 
-import OPTIONS from '../OPTIONS';
+import OPTIONS from './OPTIONS';
 
 import './App.css';
 
@@ -36,69 +38,20 @@ const Home = () => {
         },
       },
     ]);
-    // Start the introduction
+    // 开始页面介绍
     driver.start();
   }, []);
+
   return (
     <div
-      className="w-full relative"
-      style={{ background: '#131a53', textAlign: 'center' }}
+      className="w-full relative text-center"
+      style={{ background: '#131a53' }}
     >
-      <div style={{ height: '2.2vh' }}>
-        <img
-          className="absolute"
-          style={{ top: '3vh', width: '8vh', left: '3.2vh' }}
-          src="./img/weaver.png"
-        />
-
-        <img
-          className="absolute"
-          style={{ top: '4.3vh', width: '6.8vh', left: '13vh' }}
-          src="./img/jincengda.png"
-        />
-      </div>
-      <h1
-        className="text-white first-element-introduction"
-        style={{ fontFamily: 'Microsoft YaHei' }}
-      >
-        全程数字化合同管理业务体验站点
-      </h1>
-      <p
-        className="text-white"
-        style={{ textTransform: 'uppercase', letterSpacing: '2px' }}
-      >
-        Full-process digital contract management platform trial site
-      </p>
-      {/** 纵向斑马线 */}
-      <div className="w-full" style={{ padding: '0 1.65vh' }}>
-        <div
-          className="absolute w-full top-0 left-0 flex text-white"
-          style={{ padding: '26.8vh 1.62vw 1.65vh' }}
-        >
-          <div className="w-1/5 relative first-element-introduction">
-            <div className="absolute" style={{ right: 0, top: 0 }}>
-              <Zebra size={`55vh`} rotate={-180} />
-            </div>
-          </div>
-          <div className="w-1/5 relative">
-            <div className="absolute" style={{ right: 0, top: 0 }}>
-              <Zebra size={`55vh`} rotate={-180} />
-            </div>
-          </div>
-          <div className="w-1/5 relative">
-            <div className="absolute" style={{ right: 0, top: 0 }}>
-              <Zebra size={`55vh`} rotate={-180} />
-            </div>
-          </div>
-          <div className="w-1/5 relative">
-            <div className="absolute" style={{ right: '0px', top: '0' }}>
-              <Zebra size={`55vh`} rotate={-180} />
-            </div>
-          </div>
-          {/**<div className="w-1/5 relative"><div className="absolute" style={{ right: '0px', top:'0'}}><Zebra size={`62.45vh`} rotate={-180} /></div></div>*/}
-        </div>
-      </div>
-      {/** 泳道架构图 */}
+      {/* 标题栏 8.5vh*/}
+      <Header />
+      {/** 纵向斑马线 absolute */}
+      <VerticalZebra />
+      {/** 泳道架构图 85vh*/}
       <div
         className="sp"
         style={{
@@ -109,46 +62,35 @@ const Home = () => {
       >
         <div
           className="flex z-50"
-          style={{ height: '79.8vh', padding: '1.65vh 1.46vw' }}
+          style={{ height: '80vh', padding: '1.65vh 1.46vw' }}
         >
           {[...Array(5).keys()].map((index) => (
-            <Chapter {...OPTIONS[index]} key={index} />
+            <Chapter {...OPTIONS[index]} key={index} index={index} />
           ))}
         </div>
         <div
-          className="w-full px-24	flex justify-between items-center relative third-element-introduction"
+          className="w-full	flex justify-between items-center relative third-element-introduction"
           style={{
             height: '5vh',
-            paddingLeft: '9rem',
-            paddingRight: '9rem',
+            paddingLeft: '6vw',
+            paddingRight: '6vw',
           }}
         >
-          <Link to="/details">
-            <Item {...children[0]} />
-          </Link>
-
+          <Item {...children[0]} isBrick={true} />
           <Zebra rotate={-90} size="25vh" />
-          <Item {...children[1]} />
+          <Item {...children[1]} isBrick={true} />
           <Zebra rotate={-90} size="25vh" />
-          <Item {...children[2]} />
+          <Item {...children[2]} isBrick={true} />
           <Zebra rotate={-90} size="25vh" />
-          <Item {...children[3]} />
+          <Item {...children[3]} isBrick={true} />
           <Zebra rotate={-90} size="25vh" />
-          <Item {...children[4]} />
+          <Item {...children[4]} isBrick={true} />
         </div>
       </div>
-      <div style={{ height: '5vh' }}></div>
+      <div style={{ height: '6.5vh' }}></div>
     </div>
   );
 };
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Home />
-//     </div>
-//   );
-// }
 
 const App = () => {
   return (
