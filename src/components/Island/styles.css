@@ -5,9 +5,8 @@
   border: 1px solid #d3d3d3;
   text-align: center;
   top: 50vh;
-  /* right: 2vw; */
+  left: 70vw;
   opacity: 0.6;
-  border-radius: 15px;
 }
 
 #mydiv:hover {
@@ -20,7 +19,6 @@
   z-index: 10;
   background-color: #2196F3;
   color: #fff;
-    border-radius: 15px;
 }
 
 .detail-header {

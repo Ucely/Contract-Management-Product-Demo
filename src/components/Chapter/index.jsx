@@ -1,6 +1,6 @@
 import Stage from '../Stage/Stage.component';
-import Zebra from '../Zebra/Zebra.component';
-import Item from '../Item/Item.component';
+import Zebra from '../Zebra';
+import Item from '../Item';
 
 const Chapter = ({ name, children, index }) => {
   return (
@@ -34,8 +34,8 @@ const Chapter = ({ name, children, index }) => {
           backgroundImage: 'url(./img/trajectory.gif)',
         }}
       ></div>
-      <div className="w-1/5 flex absolute" style={{ bottom: '-5.96vh' }}>
-        <div className="relative left-1/2 h-36">
+      <div className="w-1/5 flex absolute" style={{ bottom: '-12vh' }}>
+        <div className="relative h-36" style={{ left: '37%' }}>
           <div className="arrow-up arrow-up-first"></div>
           <div className="arrow-up arrow-up-second"></div>
         </div>

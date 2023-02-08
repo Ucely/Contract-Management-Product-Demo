@@ -1,3 +1,12 @@
+function getURL() {
+  let list = [
+    'https://www.bing.com',
+    'https://www.jincenda.com',
+    'https://mail.qq.com',
+  ];
+  return list[Math.floor(Math.random() * 3)];
+}
+
 const OPTIONS = [
   // 一、起草审批
   {
@@ -5,12 +14,18 @@ const OPTIONS = [
     children: [
       {
         name: '模板建立',
+        URL: getURL(),
+        desc: '合同模板的建立，主要分为三个步骤，写模板，提交模板，审批模板',
       },
       {
         name: '合同发起',
+        URL: getURL(),
+        desc: '合同模板的建立，主要分为三个步骤，写模板，提交模板，审批模板',
       },
       {
         name: '业务审批',
+        URL: getURL(),
+        desc: '合同模板的建立，主要分为三个步骤，写模板，提交模板，审批模板',
       },
       {
         name: '文本审阅',

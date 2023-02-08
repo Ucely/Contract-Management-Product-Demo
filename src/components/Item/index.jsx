@@ -1,41 +1,44 @@
 import './Item.styles.css';
+import { Link } from 'react-router-dom';
 
 const Item = ({ name, imgSrc, isBrick, isActive = false }) => {
   let isBlock = false;
 
   const brick = (
     <div className="z-10 relative" style={{ width: '11%' }}>
-      <div
-        className="w-full pt-2 pb-3 flex justify-center relative items-center cursor-pointer analysis transition duration-100"
-        style={{
-          background:
-            'linear-gradient(230deg, rgba(5,109,208,0.6), rgba(5,109,208,0.6))',
-          border: '1px solid #6094E3',
-        }}
-      >
-        <i className="icon_leftTopRadius"></i>
-        <span
-          className="icon_leftTopLine line"
-          style={{ background: '#6094E3' }}
-        ></span>
-        <img className="w-8" src={imgSrc} />
+      <Link to="/details">
         <div
-          className="text-cente ml-5 rounded-full text-xs"
-          style={{ color: '#FFFFFF' }}
-        >
-          {name}
-        </div>
-        <div
-          className="absolute w-full"
+          className="w-full pt-2 pb-3 flex justify-center relative items-center cursor-pointer analysis transition duration-100"
           style={{
-            height: '0.42rem',
-            bottom: '0',
-            left: '0',
-            background: '#055CE2',
-            opacity: '0.4',
+            background:
+              'linear-gradient(230deg, rgba(5,109,208,0.6), rgba(5,109,208,0.6))',
+            border: '1px solid #6094E3',
           }}
-        ></div>
-      </div>
+        >
+          <i className="icon_leftTopRadius"></i>
+          <span
+            className="icon_leftTopLine line"
+            style={{ background: '#6094E3' }}
+          ></span>
+          <img className="w-8" src={imgSrc} />
+          <div
+            className="text-cente ml-5 rounded-full text-xs"
+            style={{ color: '#FFFFFF' }}
+          >
+            {name}
+          </div>
+          <div
+            className="absolute w-full"
+            style={{
+              height: '0.42rem',
+              bottom: '0',
+              left: '0',
+              background: '#055CE2',
+              opacity: '0.4',
+            }}
+          ></div>
+        </div>
+      </Link>
     </div>
   );
 
@@ -110,13 +113,14 @@ const Item = ({ name, imgSrc, isBrick, isActive = false }) => {
   );
 
   return (
-    // <Link to="/details">
-    <div
-      className={`w-16 cursor-pointer text-center flex flex-col justify-center items-center relative rounded-full`}
-    >
-      {isBlock ? round : roundPro}
-      {isActive && tick}
-    </div>
+    <Link to="/details">
+      <div
+        className={`w-16 cursor-pointer text-center flex flex-col justify-center items-center relative rounded-full`}
+      >
+        {isBlock ? round : roundPro}
+        {isActive && tick}
+      </div>
+    </Link>
   );
 };
 

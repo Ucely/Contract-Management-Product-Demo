@@ -1,6 +1,6 @@
 import { useId } from 'react';
 
-import Zebra from '../Zebra/Zebra.component';
+import Zebra from '../Zebra';
 
 const VerticalZebra = () => {
   return (
