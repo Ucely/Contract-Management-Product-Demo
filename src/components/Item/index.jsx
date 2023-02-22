@@ -1,12 +1,19 @@
 import './Item.styles.css';
 import { Link } from 'react-router-dom';
 
-const Item = ({ name, imgSrc, isBrick, isActive = false }) => {
-  let isBlock = false;
-
+const Item = ({
+  name,
+  firstClass,
+  secondClass,
+  isBrick = false,
+  isBlock = false,
+  isActive = false,
+}) => {
   const brick = (
     <div className="z-10 relative" style={{ width: '11%' }}>
-      <Link to="/details">
+      <Link
+        to={`/details?firstClass=${firstClass}&secondClass=${firstClass}$step=0`}
+      >
         <div
           className="w-full pt-2 pb-3 flex justify-center relative items-center cursor-pointer analysis transition duration-100"
           style={{
@@ -20,7 +27,7 @@ const Item = ({ name, imgSrc, isBrick, isActive = false }) => {
             className="icon_leftTopLine line"
             style={{ background: '#6094E3' }}
           ></span>
-          <img className="w-8" src={imgSrc} />
+          <img className="w-8" src={`./img/${firstClass}-${secondClass}.png`} />
           <div
             className="text-cente ml-5 rounded-full text-xs"
             style={{ color: '#FFFFFF' }}
@@ -56,7 +63,7 @@ const Item = ({ name, imgSrc, isBrick, isActive = false }) => {
           'linear-gradient(230deg, rgba(0, 255, 226, 0.3), rgba(0, 255, 226, 0.3))',
       }}
     >
-      <img className="icon" src={imgSrc} />
+      <img className="icon" src={`./img/${firstClass}-${secondClass}.png`} />
       <div
         className="w-28 p-1 absolute py text-center rounded-full text-xs z-50 font-normal transition duration-100"
         style={{
@@ -84,7 +91,7 @@ const Item = ({ name, imgSrc, isBrick, isActive = false }) => {
           'linear-gradient(230deg, rgba(0, 255, 226, 0.3), rgba(0, 255, 226, 0.3))',
       }}
     >
-      <img className="icon" src={imgSrc} />
+      <img className="icon" src={`./img/${firstClass}-${secondClass}.png`} />
       <div
         className="p-1 absolute py text-center rounded-full text-xs z-50 font-medium transition duration-100"
         style={{
@@ -113,7 +120,9 @@ const Item = ({ name, imgSrc, isBrick, isActive = false }) => {
   );
 
   return (
-    <Link to="/details">
+    <Link
+      to={`/details?firstClass=${firstClass}&secondClass=${secondClass}&step=0`}
+    >
       <div
         className={`w-16 cursor-pointer text-center flex flex-col justify-center items-center relative rounded-full`}
       >

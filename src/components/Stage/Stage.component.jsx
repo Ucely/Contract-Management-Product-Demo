@@ -1,7 +1,7 @@
-import './styles.css';
+import "./Stage.styles.css";
 
 // 阶段泳道
-function Stage({ title, children }) {
+function Stage({ title = "阶段", children = "bala bala" }) {
   return (
     <div className="w-1/5" style={{ padding: '0 0.36vw' }}>
       <div className="wea-stage-bg">

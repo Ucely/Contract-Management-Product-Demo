@@ -15,15 +15,15 @@ const Chapter = ({ name, children, index }) => {
           backgroundImage: 'url(./img/trajectory.gif)',
         }}
       ></div>
-      <Item {...children[0]} imgSrc={`./img/${index}-0.png`} />
+      <Item {...children[0]} firstClass={index} secondClass={0} />
       <Zebra />
-      <Item {...children[1]} imgSrc={`./img/${index}-1.png`} />
+      <Item {...children[1]} firstClass={index} secondClass={1} />
       <Zebra />
-      <Item {...children[2]} imgSrc={`./img/${index}-2.png`} />
+      <Item {...children[2]} firstClass={index} secondClass={2} />
       <Zebra />
-      <Item {...children[3]} imgSrc={`./img/${index}-3.png`} />
+      <Item {...children[3]} firstClass={index} secondClass={3} />
       <Zebra />
-      <Item {...children[4]} imgSrc={`./img/${index}-4.png`} />
+      <Item {...children[4]} firstClass={index} secondClass={4} />
       <div
         className="absolute line-x"
         style={{
@@ -34,8 +34,8 @@ const Chapter = ({ name, children, index }) => {
           backgroundImage: 'url(./img/trajectory.gif)',
         }}
       ></div>
-      <div className="w-1/5 flex absolute" style={{ bottom: '-12vh' }}>
-        <div className="relative h-36" style={{ left: '37%' }}>
+      <div className="w-1/5 flex absolute" style={{ bottom: '-5.96vh' }}>
+        <div className="relative left-1/2 h-36">
           <div className="arrow-up arrow-up-first"></div>
           <div className="arrow-up arrow-up-second"></div>
         </div>
