@@ -19,9 +19,11 @@ const Details = () => {
   const [currentSec, setCurrentSec] = useState(second);
   const [currentStep, setCurrentStep] = useState(third);
   const { children } = OPTIONS[first];
-  const { name, desc, scene } = children[second];
+  const { scene } = children[second];
 
-  const onChange = () => {};
+  const handleStepChange = (index) => {
+    setCurrentStep(index);
+  };
 
   useEffect(() => {
     changeURLArg(document.URL, 'secondClass', currentSec);
@@ -35,9 +37,9 @@ const Details = () => {
             <Logo />
             <Steps
               size="small"
-              current={0}
+              current={currentStep}
               items={scene}
-              onChange={onChange}
+              onChange={handleStepChange}
               style={{ width: '30vw' }}
             />
             <div className="relative hidden lg:flex items-center ml-auto">

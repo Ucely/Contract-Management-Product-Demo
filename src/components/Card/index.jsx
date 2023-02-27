@@ -1,5 +1,4 @@
 import './styles.css';
-import { getURLParams } from '../../utils/parseUrl';
 
 const Card = ({
   name = '',
@@ -9,10 +8,6 @@ const Card = ({
   currentSec,
   setCurrentSec,
 }) => {
-  const paramObj = getURLParams(document.URL);
-  const { firstClass, secondClass } = paramObj;
-  const first = parseInt(firstClass),
-    second = parseInt(secondClass);
   const selected = currentSec === index;
   return (
     <div
@@ -26,7 +21,6 @@ const Card = ({
       </h5>
       {selected && <div className="card-body">{desc}</div>}
     </div>
-    // hover
   );
 };
 
