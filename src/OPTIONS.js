@@ -16,22 +16,51 @@ const OPTIONS = [
         name: '模板建立',
         URL: getURL(),
         desc: '合同模板的建立，主要分为三个步骤，写模板，提交模板，审批模板',
+        scene: [
+          { title: '模板建立', url: getURL(), description: '' },
+          { title: '模板提交', url: getURL(), description: '' },
+          { title: '模板审批', url: getURL(), description: '' },
+        ],
       },
       {
         name: '合同发起',
         URL: getURL(),
         desc: '合同模板的建立，主要分为三个步骤，写模板，提交模板，审批模板',
+        scene: [
+          { title: '模板建立', url: getURL(), description: '' },
+          { title: '模板提交', url: getURL(), description: '' },
+          { title: '模板审批', url: getURL(), description: '' },
+        ],
       },
       {
         name: '业务审批',
         URL: getURL(),
         desc: '合同模板的建立，主要分为三个步骤，写模板，提交模板，审批模板',
+        scene: [
+          { title: '模板建立', url: getURL(), description: '' },
+          { title: '模板提交', url: getURL(), description: '' },
+          { title: '模板审批', url: getURL(), description: '' },
+        ],
       },
       {
         name: '文本审阅',
+        URL: getURL(),
+        desc: '合同模板的建立，主要分为三个步骤，写模板，提交模板，审批模板',
+        scene: [
+          { title: '模板建立', url: getURL(), description: '' },
+          { title: '模板提交', url: getURL(), description: '' },
+          { title: '模板审批', url: getURL(), description: '' },
+        ],
       },
       {
         name: '内外协同',
+        URL: getURL(),
+        desc: '合同模板的建立，主要分为三个步骤，写模板，提交模板，审批模板',
+        scene: [
+          { title: '模板建立', url: getURL(), description: '' },
+          { title: '模板提交', url: getURL(), description: '' },
+          { title: '模板审批', url: getURL(), description: '' },
+        ],
       },
     ],
   },
@@ -57,6 +86,7 @@ const OPTIONS = [
       },
     ],
   },
+
   // 三、电子台账
   {
     name: '电子台账',
@@ -78,6 +108,7 @@ const OPTIONS = [
       },
     ],
   },
+
   // 四、合同履约
   {
     name: '合同履约',
@@ -99,6 +130,7 @@ const OPTIONS = [
       },
     ],
   },
+
   // 五、合同归档
   {
     name: '合同归档',
@@ -120,6 +152,7 @@ const OPTIONS = [
       },
     ],
   },
+
   // 六、合同报表
   {
     name: '合同报表',

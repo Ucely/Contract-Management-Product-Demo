@@ -1,6 +1,6 @@
 import Header from '../../components/Header';
 import VerticalZebra from '../../components/VerticalZebra';
-import Pool from '../../components/Pool';
+import Pool from '../../components/Pool/index';
 
 const Home = () => (
   <div className="w-full relative text-center bg-[#131a53]">

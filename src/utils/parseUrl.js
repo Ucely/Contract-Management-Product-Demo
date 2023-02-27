@@ -11,3 +11,20 @@ export const getURLParams = (url) => {
 // const paramObj = getURLParams3(document.URL);
 
 // 返回的结果 paramObj：{file: "main.js", terminal: "dev"}
+
+
+export const changeURLArg = (url, arg, arg_val) => {
+  var pattern = arg + '=([^&]*)';
+  var replaceText = arg + '=' + arg_val;
+  if (url.match(pattern)) {
+    var tmp = '/(' + arg + '=)([^&]*)/gi';
+    tmp = url.replace(eval(tmp), replaceText);
+    return tmp;
+  } else {
+    if (url.match('[?]')) {
+      return url + '&' + replaceText;
+    } else {
+      return url + '?' + replaceText;
+    }
+  }
+};

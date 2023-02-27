@@ -1,8 +1,10 @@
-import Zebra from '../../components/Zebra';
-import Chapter from '../../components/Chapter';
-import Item from '../../components/Item';
+import Zebra from '../Zebra/index';
+import Chapter from '../Chapter/index';
+import Item from '../Item/index';
 
 import OPTIONS from '../../OPTIONS';
+
+import { Link } from 'react-router-dom';
 
 const Pool = () => {
   const { children } = OPTIONS[5];
@@ -12,7 +14,7 @@ const Pool = () => {
       style={{
         backgroundSize: '100% auto',
         backgroundPositionY: '70%',
-        paddingBottom: '6.5vh',
+        paddingBottom: 0,
       }}
     >
       <div
@@ -40,6 +42,15 @@ const Pool = () => {
         <Item {...children[3]} isBrick={true} firstClass={5} secondClass={3} />
         <Zebra rotate={-90} size="25vh" />
         <Item {...children[4]} isBrick={true} firstClass={5} secondClass={4} />
+      </div>
+      <div style={{ height: '6vh', marginLeft: '90vw', marginTop: '.5vh' }}>
+        <Link to={`/structure`}>
+          <img
+            className="logo-weaver"
+            src="./img/structure.png"
+            style={{ height: '35%', width: '1.5em', right: '97vw' }}
+          />
+        </Link>
       </div>
     </div>
   );

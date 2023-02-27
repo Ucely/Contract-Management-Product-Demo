@@ -12,7 +12,7 @@ const Item = ({
   const brick = (
     <div className="z-10 relative" style={{ width: '11%' }}>
       <Link
-        to={`/details?firstClass=${firstClass}&secondClass=${firstClass}$step=0`}
+        to={`/details?firstClass=${firstClass}&secondClass=${secondClass}$thirdClass=0`}
       >
         <div
           className="w-full pt-2 pb-3 flex justify-center relative items-center cursor-pointer analysis transition duration-100"
@@ -121,7 +121,7 @@ const Item = ({
 
   return (
     <Link
-      to={`/details?firstClass=${firstClass}&secondClass=${secondClass}&step=0`}
+      to={`/details?firstClass=${firstClass}&secondClass=${secondClass}&thirdClass=0`}
     >
       <div
         className={`w-16 cursor-pointer text-center flex flex-col justify-center items-center relative rounded-full`}
