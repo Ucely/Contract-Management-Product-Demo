@@ -1,9 +1,7 @@
-import { srcUrlPrefix, pageUrlPrefix } from '../../config/config.js';
-import { Divider } from 'antd';
-
-import { Popover } from 'antd';
-
+import { Divider, Popover } from 'antd';
 import { Link } from 'react-router-dom';
+
+import { srcUrlPrefix, pageUrlPrefix } from '../../config/config.js';
 
 const Hint = () => {
   const content = (
@@ -12,11 +10,11 @@ const Hint = () => {
       <p className="font-bold">销售经理: 张慧 </p>
       <p>手机: 181-2117-1364</p>
       <div className="mb-2" style={{ display: 'flex' }}>
-        微信: {` `}
+        微信:
         <img
           src={srcUrlPrefix + 'hui.jpg'}
           alt=""
-          style={{ width: '10%', marginLeft: '10px' }}
+          style={{ width: '8vw', marginLeft: '5px' }}
         />
       </div>
       <Divider style={{ margin: '10px 0' }} />

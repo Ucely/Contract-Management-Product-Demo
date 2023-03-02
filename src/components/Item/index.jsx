@@ -11,9 +11,7 @@ const Item = ({
 }) => {
   const brick = (
     <div className="z-10 relative" style={{ width: '11%' }}>
-      <Link
-        to={`/details?firstClass=${firstClass}&secondClass=${secondClass}$thirdClass=0`}
-      >
+      <Link to={`/details?firstClass=${firstClass}&secondClass=${secondClass}`}>
         <div
           className="w-full pt-2 pb-3 flex justify-center relative items-center cursor-pointer analysis transition duration-100"
           style={{
@@ -66,7 +64,10 @@ const Item = ({
           'linear-gradient(230deg, rgba(0, 255, 226, 0.3), rgba(0, 255, 226, 0.3))',
       }}
     >
-      <img className="icon" src={`./img/${firstClass}-${secondClass}.png`} />
+      <img
+        className="icon icon-circle"
+        src={`./img/${firstClass}-${secondClass}.png`}
+      />
       <div
         className="w-28 p-1 absolute py text-center rounded-full text-xs z-50 font-normal transition duration-100"
         style={{
@@ -94,7 +95,10 @@ const Item = ({
           'linear-gradient(230deg, rgba(0, 255, 226, 0.3), rgba(0, 255, 226, 0.3))',
       }}
     >
-      <img className="icon" src={`./img/${firstClass}-${secondClass}.png`} />
+      <img
+        className="icon icon-circle"
+        src={`./img/${firstClass}-${secondClass}.png`}
+      />
       <div
         className="p-1 absolute py text-center rounded-full text-xs z-50 font-medium transition duration-100"
         style={{
@@ -123,9 +127,7 @@ const Item = ({
   );
 
   return (
-    <Link
-      to={`/details?firstClass=${firstClass}&secondClass=${secondClass}&thirdClass=0`}
-    >
+    <Link to={`/details?firstClass=${firstClass}&secondClass=${secondClass}`}>
       <div
         className={`w-16 cursor-pointer text-center flex flex-col justify-center items-center relative rounded-full`}
       >

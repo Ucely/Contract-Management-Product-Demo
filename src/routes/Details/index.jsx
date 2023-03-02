@@ -13,12 +13,11 @@ import { Steps } from 'antd';
 
 const Details = () => {
   const paramObj = getURLParams(document.URL);
-  const { firstClass, secondClass, thirdClass } = paramObj;
+  const { firstClass, secondClass } = paramObj;
   const first = parseInt(firstClass),
-    second = parseInt(secondClass),
-    third = parseInt(thirdClass);
+    second = parseInt(secondClass);
   const [currentSec, setCurrentSec] = useState(second);
-  const [currentStep, setCurrentStep] = useState(third);
+  const [currentStep, setCurrentStep] = useState(0);
   const { children } = OPTIONS[first];
   const { scene } = children[second];
 
@@ -49,44 +48,6 @@ const Details = () => {
       </div>
       <div className="flex" style={{ height: '92.5vh' }}>
         <div className="xl:w-72 w-48 flex-shrink-0 border-r border-gray-200 dark:border-gray-800 h-full overflow-y-auto lg:block hidden p-5">
-          <div className="flex">
-            {/* <div className="flex items-center p-4 border-b border-slate-900/10 lg:hidden dark:border-slate-50/[0.06]">
-              <button
-                type="button"
-                className="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
-              >
-                <span className="sr-only">Navigation</span>
-                <svg width="24" height="24">
-                  <path
-                    d="M5 6h14M5 12h14M5 18h14"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  ></path>
-                </svg>
-              </button>
-              <ol className="ml-4 flex text-sm leading-6 whitespace-nowrap min-w-0">
-                <li className="flex items-center">
-                  Backgrounds
-                  <svg
-                    width="3"
-                    height="6"
-                    aria-hidden="true"
-                    className="mx-3 overflow-visible text-slate-400"
-                  >
-                    <path
-                      d="M0 0L3 3L0 6"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    ></path>
-                  </svg>
-                </li>
-              </ol> 
-            </div> */}
-          </div>
           <div className="space-y-4 mt-3">
             {children.map((info, index) => (
               <Card
@@ -110,3 +71,43 @@ const Details = () => {
 };
 
 export default Details;
+
+
+          // <div className="flex">
+          //   {/* <div className="flex items-center p-4 border-b border-slate-900/10 lg:hidden dark:border-slate-50/[0.06]">
+          //     <button
+          //       type="button"
+          //       className="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
+          //     >
+          //       <span className="sr-only">Navigation</span>
+          //       <svg width="24" height="24">
+          //         <path
+          //           d="M5 6h14M5 12h14M5 18h14"
+          //           fill="none"
+          //           stroke="currentColor"
+          //           stroke-width="2"
+          //           stroke-linecap="round"
+          //         ></path>
+          //       </svg>
+          //     </button>
+          //     <ol className="ml-4 flex text-sm leading-6 whitespace-nowrap min-w-0">
+          //       <li className="flex items-center">
+          //         Backgrounds
+          //         <svg
+          //           width="3"
+          //           height="6"
+          //           aria-hidden="true"
+          //           className="mx-3 overflow-visible text-slate-400"
+          //         >
+          //           <path
+          //             d="M0 0L3 3L0 6"
+          //             fill="none"
+          //             stroke="currentColor"
+          //             stroke-width="1.5"
+          //             stroke-linecap="round"
+          //           ></path>
+          //         </svg>
+          //       </li>
+          //     </ol> 
+          //   </div> */}
+          // </div>;
