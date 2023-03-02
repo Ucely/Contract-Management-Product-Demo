@@ -16,9 +16,9 @@
   width: 2.7vh;
 }
 
-/* .icon:hover {
+.icon:hover {
   width: 3vh;
-} */
+}
 
 .item-row {
   background: linear-gradient(179deg, rgba(0, 38, 159, 0.2), rgba(5, 109, 249, 0));

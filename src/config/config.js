@@ -1,3 +1,3 @@
 export const srcUrlPrefix = './img/';
 
-export const pageUrlPrefix = './';
+export const pageUrlPrefix = '/';

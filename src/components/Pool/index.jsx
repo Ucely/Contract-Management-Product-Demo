@@ -4,8 +4,6 @@ import Item from '../Item/index';
 
 import OPTIONS from '../../OPTIONS';
 
-import { Link } from 'react-router-dom';
-
 const Pool = () => {
   const { children } = OPTIONS[5];
 
@@ -14,7 +12,7 @@ const Pool = () => {
       style={{
         backgroundSize: '100% auto',
         backgroundPositionY: '70%',
-        paddingBottom: 0,
+        paddingBottom: '6.5vh',
       }}
     >
       <div
@@ -26,7 +24,7 @@ const Pool = () => {
         ))}
       </div>
       <div
-        className="w-full	flex justify-between items-center relative third-element-introduction"
+        className="w-full	flex justify-between items-center relative"
         style={{
           height: '5vh',
           paddingLeft: '6vw',
@@ -42,15 +40,6 @@ const Pool = () => {
         <Item {...children[3]} isBrick={true} firstClass={5} secondClass={3} />
         <Zebra rotate={-90} size="25vh" />
         <Item {...children[4]} isBrick={true} firstClass={5} secondClass={4} />
-      </div>
-      <div style={{ height: '6vh', marginLeft: '90vw', marginTop: '.5vh' }}>
-        <Link to={`/structure`}>
-          <img
-            className="logo-weaver"
-            src="./img/structure.png"
-            style={{ height: '35%', width: '1.5em', right: '97vw' }}
-          />
-        </Link>
       </div>
     </div>
   );

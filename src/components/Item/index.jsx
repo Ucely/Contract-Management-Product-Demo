@@ -27,7 +27,10 @@ const Item = ({
             className="icon_leftTopLine line"
             style={{ background: '#6094E3' }}
           ></span>
-          <img className="w-8" src={`./img/${firstClass}-${secondClass}.png`} />
+          <img
+            className="icon"
+            src={`./img/${firstClass}-${secondClass}.png`}
+          />
           <div
             className="text-cente ml-5 rounded-full text-xs"
             style={{ color: '#FFFFFF' }}
