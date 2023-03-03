@@ -1,15 +1,55 @@
 import React, { useState, useEffect } from 'react';
 
 import { getURLParams, changeURLArg } from '../../utils/parseUrl';
+import { HomeOutlined } from '@ant-design/icons';
 
 import OPTIONS from '../../OPTIONS';
 
 import Card from '../../components/Card/index';
 import Display from '../../components/Display/index';
-import Logo from '../../components/Logo/index';
+
 import Hint from '../../components/Hint';
 
 import { Steps } from 'antd';
+
+import { Breadcrumb } from 'antd';
+
+import 'antd/dist/reset.css';
+
+const items = [
+  {
+    key: '1',
+    label: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="http://www.alipay.com/"
+      >
+        General
+      </a>
+    ),
+  },
+  {
+    key: '2',
+    label: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="http://www.taobao.com/"
+      >
+        Layout
+      </a>
+    ),
+  },
+  {
+    key: '3',
+    label: (
+      <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
+        Navigation
+      </a>
+    ),
+  },
+];
 
 const Details = () => {
   const paramObj = getURLParams(document.URL);
@@ -34,8 +74,30 @@ const Details = () => {
       <div className="max-w-8xl mx-auto">
         <div className="py-4 border-b border-slate-900/10 lg:px-8 dark:border-slate-300/10 mx-4 lg:mx-0">
           <div className="relative flex items-center">
-            <Logo />
+            <div className="xl:w-72 w-48" style={{ fontSize: '16px' }}>
+              <Breadcrumb>
+                <Breadcrumb.Item href="">
+                  <HomeOutlined />
+                </Breadcrumb.Item>
+                <Breadcrumb.Item
+                  menu={{
+                    items,
+                  }}
+                >
+                  <a href="">General</a>
+                </Breadcrumb.Item>
+                <Breadcrumb.Item
+                  menu={{
+                    items,
+                  }}
+                >
+                  <a href="">General</a>
+                </Breadcrumb.Item>
+              </Breadcrumb>
+            </div>
+
             <Steps
+              className=""
               size="small"
               current={currentStep}
               items={scene}

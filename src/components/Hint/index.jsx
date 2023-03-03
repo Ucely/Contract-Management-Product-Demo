@@ -28,6 +28,18 @@ const Hint = () => {
   return (
     <div className="relative lg:flex items-center ml-auto">
       <div className="flex items-center  border-slate-200 ml-6 pl-6 dark:border-slate-800">
+                    <a
+              className="mr-3 flex overflow-hidden md:w-auto xl:w-72 w-48"
+              href={pageUrlPrefix}
+            >
+              <img
+                className="mt-1 mb-1"
+                src={srcUrlPrefix + 'jincengda_normal.png'}
+                alt="今承达Logo"
+                style={{ width: '8vw' }}
+              />
+            </a>
+            
         <Link to={pageUrlPrefix + `structure`}>
           <a className="inline cursor-pointer" title="架构总图">
             <img src={srcUrlPrefix + 'framework.png'} alt="framework" />
