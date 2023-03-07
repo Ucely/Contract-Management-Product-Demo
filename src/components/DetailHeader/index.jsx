@@ -39,6 +39,7 @@ const DetailHeader = () => {
     setCurrentFirst,
     setCurrentSec,
     setCurrentStep,
+    setCurrentFp,
   } = useContext(DetailContext);
   const { children } = OPTIONS[currentFirst];
   const { scene } = children[currentSec];
@@ -73,6 +74,7 @@ const DetailHeader = () => {
                 setCurrentFirst(v);
                 setCurrentSec(0);
                 setCurrentStep(0);
+                setCurrentFp(0);
               }}
             />
           </div>
@@ -84,6 +86,7 @@ const DetailHeader = () => {
             items={scene}
             onChange={(v) => {
               setCurrentStep(v);
+              setCurrentFp(0);
             }}
             style={{ width: '50vw' }}
           />
