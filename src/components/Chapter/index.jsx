@@ -1,6 +1,8 @@
-import Stage from '../Stage/Stage.component';
-import Zebra from '../Zebra';
-import Item from '../Item';
+import Stage from '../Stage/index';
+import Zebra from '../Zebra/index';
+import Item from '../Item/index';
+
+import { srcUrlPrefix } from '../../config/config';
 
 const Chapter = ({ name, children, index }) => {
   return (
@@ -12,7 +14,7 @@ const Chapter = ({ name, children, index }) => {
           width: '40%',
           left: '-5px',
           top: '7.75vh',
-          backgroundImage: 'url(./img/trajectory.gif)',
+          backgroundImage: `url(${srcUrlPrefix}/trajectory.gif)`,
         }}
       ></div>
       <Item {...children[0]} firstClass={index} secondClass={0} />
@@ -31,7 +33,7 @@ const Chapter = ({ name, children, index }) => {
           width: '38%',
           left: '64%',
           top: '62.5vh',
-          backgroundImage: 'url(./img/trajectory.gif)',
+          backgroundImage: `url(${srcUrlPrefix}/trajectory.gif)`,
         }}
       ></div>
       <div

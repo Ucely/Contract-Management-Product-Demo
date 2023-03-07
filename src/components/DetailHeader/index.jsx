@@ -1,48 +1,14 @@
-import { srcUrlPrefix, pageUrlPrefix } from '../../config/config';
-import { HomeOutlined } from '@ant-design/icons';
-
-import { Steps } from 'antd';
-
-import { Breadcrumb } from 'antd';
-
-import { Divider, Popover } from 'antd';
+import { useContext } from 'react';
+import { Steps, Breadcrumb, Divider, Popover, Select } from 'antd';
 import { Link } from 'react-router-dom';
+
+import { DetailContext } from '../../context/Details';
+
+import { srcUrlPrefix, pageUrlPrefix } from '../../config/config';
+
 import OPTIONS from '../../OPTIONS';
 
-const items = [
-  {
-    key: '1',
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="http://www.alipay.com/"
-      >
-        General
-      </a>
-    ),
-  },
-  {
-    key: '2',
-    label: (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="http://www.taobao.com/"
-      >
-        Layout
-      </a>
-    ),
-  },
-  {
-    key: '3',
-    label: (
-      <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
-        Navigation
-      </a>
-    ),
-  },
-];
+import './styles.css';
 
 const content = (
   <div>
@@ -65,39 +31,50 @@ const content = (
   </div>
 );
 
-const DetailHeader = ({
-  handleStepChange,
-  currentStep,
-  currentFirst,
-  currentSec,
-}) => {
+const DetailHeader = () => {
+  const {
+    currentStep,
+    currentFirst,
+    currentSec,
+    setCurrentFirst,
+    setCurrentSec,
+    setCurrentStep,
+  } = useContext(DetailContext);
   const { children } = OPTIONS[currentFirst];
   const { scene } = children[currentSec];
+  const firstClassList = OPTIONS.map(({ name }, index) => {
+    return { value: index, label: name };
+  });
 
   return (
     <div className="max-w-8xl mx-auto">
       <div className="py-4 border-b border-slate-900/10 lg:px-8 dark:border-slate-300/10 mx-4 lg:mx-0">
         <div className="relative flex items-center">
-          <div className="xl:w-72 w-48" style={{ fontSize: '16px' }}>
-            <Breadcrumb>
-              <Breadcrumb.Item href="">
-                <HomeOutlined />
-              </Breadcrumb.Item>
-              <Breadcrumb.Item
-                menu={{
-                  items,
-                }}
-              >
-                <a href="">General</a>
-              </Breadcrumb.Item>
-              <Breadcrumb.Item
-                menu={{
-                  items,
-                }}
-              >
-                <a href="">General</a>
-              </Breadcrumb.Item>
-            </Breadcrumb>
+          <div className="xl:w-72 w-48 flex" style={{ fontSize: '16px' }}>
+            <a
+              className="ml-2 mr-2 mt-2 inline cursor-pointer"
+              title="回到首页"
+            >
+              <Link to={pageUrlPrefix}>
+                <img
+                  src={srcUrlPrefix + 'back.png'}
+                  alt="back"
+                  style={{ width: '21.33px' }}
+                />
+              </Link>
+            </a>
+            <Select
+              defaultValue={firstClassList[currentFirst]}
+              style={{ width: 125 }}
+              bordered={false}
+              options={firstClassList}
+              size="large"
+              onChange={(v) => {
+                setCurrentFirst(v);
+                setCurrentSec(0);
+                setCurrentStep(0);
+              }}
+            />
           </div>
 
           <Steps
@@ -105,8 +82,10 @@ const DetailHeader = ({
             size="small"
             current={currentStep}
             items={scene}
-            onChange={handleStepChange}
-            style={{ width: '30vw' }}
+            onChange={(v) => {
+              setCurrentStep(v);
+            }}
+            style={{ width: '50vw' }}
           />
 
           <div className="relative lg:flex items-center ml-auto">
@@ -119,7 +98,7 @@ const DetailHeader = ({
                   className="mt-1 mb-1"
                   src={srcUrlPrefix + 'jincengda_normal.png'}
                   alt="今承达Logo"
-                  style={{ width: '8vw' }}
+                  style={{ width: '100px' }}
                 />
               </a>
 

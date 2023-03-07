@@ -1,6 +1,11 @@
+import { useContext } from 'react';
+
+import { DetailContext } from '../../context/Details';
+
 import OPTIONS from '../../OPTIONS';
 
-const Display = ({ currentFirst, currentSec, currentStep }) => {
+const Display = () => {
+  const { currentFirst, currentSec, currentStep } = useContext(DetailContext);
   const { children } = OPTIONS[currentFirst];
   const { scene } = children[currentSec];
 

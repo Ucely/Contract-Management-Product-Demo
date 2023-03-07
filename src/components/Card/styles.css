@@ -1,4 +1,4 @@
-.card {
+.jcd-card {
     display: flex;
     flex: 1 1 0px;
     flex-direction: column;
@@ -15,13 +15,13 @@
     margin: 3vh 0;
 }
 
-.card:hover {
+.jcd-card:hover {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px -2px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px, rgba(0, 0, 0, 0.09) 0px 5px 12px 4px;
   cursor: pointer;
   transform: scale(1.02);
 }
 
-.card-header {
+.jcd-card-header {
   color: rgba(0, 0, 0, 0.88);
   font-weight: 600;
   font-size: 16px;
@@ -30,7 +30,7 @@
   transition: all 0.3s ease 0s;
 }
 
-.card-body {
+.jcd-card-body {
   color: rgba(0,0,0,.45);
   flex: 1 1 auto;
   font-size: 10px;

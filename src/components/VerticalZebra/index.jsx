@@ -7,7 +7,7 @@ const VerticalZebra = () => {
     <div className="w-full" style={{ padding: '0 1.65vh' }}>
       <div
         className="absolute w-full top-0 left-0 flex text-white"
-        style={{ padding: '24.4vh 1.62vw 1.65vh' }}
+        style={{ padding: '24vh 1.62vw 1.65vh' }}
       >
         {/* 页面中间四条竖着垂直的斑马线 */}
         {[0, 1, 2, 3].map((_) => {

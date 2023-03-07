@@ -805,10 +805,6 @@
   }
 }
 
-.h-36 {
-  height: 4rem;
-}
-
 .left-1\/2 {
   left: 50%;
 }
@@ -824,4 +820,8 @@
   position: absolute;
   z-index: 5;
   transform: rotate(180deg);
+}
+
+.ui-steps-item{
+  cursor: pointer;
 }

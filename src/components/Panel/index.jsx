@@ -1,7 +1,14 @@
+import { useContext } from 'react';
+
+import { DetailContext } from '../../context/Details';
+
 import Card from '../../components/Card/index';
 import OPTIONS from '../../OPTIONS';
 
-const Panel = ({ currentFirst, currentSec, setCurrentSec }) => {
+const Panel = () => {
+  const { currentFirst, currentSec, setCurrentSec, setCurrentStep } =
+    useContext(DetailContext);
+
   const { children } = OPTIONS[currentFirst];
 
   return (
@@ -14,6 +21,7 @@ const Panel = ({ currentFirst, currentSec, setCurrentSec }) => {
             index={index}
             currentSec={currentSec}
             setCurrentSec={setCurrentSec}
+            setCurrentStep={setCurrentStep}
           />
         ))}
       </div>

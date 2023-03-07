@@ -1,0 +1,8 @@
+.ant-select-selection-item {
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.ant-select-item-option-content {
+  text-align: center;
+}
