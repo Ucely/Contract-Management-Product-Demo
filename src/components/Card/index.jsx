@@ -1,20 +1,16 @@
+import { useContext } from 'react';
+
+import { DetailContext } from '../../context/Details';
+
 import './styles.css';
 
-const Card = ({
-  name = '',
-  desc = '',
-  index,
-  currentSec,
-  setCurrentSec,
-  setCurrentStep,
-}) => {
-  const selected = currentSec === index;
+const Card = ({ name = '', desc = '', index, currentFp, setCurrentFp }) => {
+  const selected = currentFp === index;
   return (
     <div
       className={`jcd-card ${selected ? 'ring-2 ring-blue-500' : ''}`}
       onClick={() => {
-        setCurrentSec(index);
-        setCurrentStep(0);
+        setCurrentFp(index);
       }}
     >
       <h5

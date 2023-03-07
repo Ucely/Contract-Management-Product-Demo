@@ -8,6 +8,8 @@ export const DetailContext = createContext({
   setCurrentSec: () => {},
   currentStep: 0,
   setCurrentStep: () => {},
+  currentFp: 0,
+  setCurrentFp: () => {},
 });
 
 export const DetailProvider = ({ children }) => {
@@ -15,6 +17,7 @@ export const DetailProvider = ({ children }) => {
   const [currentFirst, setCurrentFirst] = useState(parseInt(firstClass));
   const [currentSec, setCurrentSec] = useState(parseInt(secondClass));
   const [currentStep, setCurrentStep] = useState(0);
+  const [currentFp, setCurrentFp] = useState(0);
 
   return (
     <DetailContext.Provider
@@ -25,6 +28,8 @@ export const DetailProvider = ({ children }) => {
         setCurrentSec,
         currentStep,
         setCurrentStep,
+        currentFp,
+        setCurrentFp,
       }}
     >
       {children}

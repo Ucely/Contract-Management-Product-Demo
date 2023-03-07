@@ -52,7 +52,7 @@ const DetailHeader = () => {
         <div className="relative flex items-center">
           <div className="xl:w-72 w-48 flex" style={{ fontSize: '16px' }}>
             <a
-              className="ml-2 mr-2 mt-2 inline cursor-pointer"
+              className="ml-1 mr-2 mt-2 inline cursor-pointer"
               title="回到首页"
             >
               <Link to={pageUrlPrefix}>
@@ -65,7 +65,7 @@ const DetailHeader = () => {
             </a>
             <Select
               defaultValue={firstClassList[currentFirst]}
-              style={{ width: 125 }}
+              style={{ width: 115 }}
               bordered={false}
               options={firstClassList}
               size="large"
